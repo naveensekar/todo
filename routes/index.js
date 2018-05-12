@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var db = "mongodb://localhost:27017/todoapp";
+var db = "mongodb://admin:naveen@localhost:27017/todoapp";
 mongoose.connect(db);
 
 // models
