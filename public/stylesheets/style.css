@@ -1,0 +1,28 @@
+body {
+  padding: 50px;
+  font: 14px sans-serif;
+  font-weight: lighter;
+}
+
+a {
+  color: #00B7FF;
+}
+.list {
+  list-style-position: inside;
+}
+.item, .comp-item {
+  font-size: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid rgb(185, 185, 185);
+  color: rgb(185, 185, 185);
+  cursor: pointer;
+}
+.item:hover {background: rgb(243, 243, 243);}
+
+.item:last-child, .comp-item:last-child { border-bottom: none;}
+
+.item span {font-weight: lighter; color: #000}
+
+.comp-item {text-decoration: line-through;}
+
+/* input {font-size: 20px; padding: 10px 20px;} */

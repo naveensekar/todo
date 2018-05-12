@@ -1,0 +1,27 @@
+<h1>Todo List</h1>
+
+<div id="container">
+    <form action="/" method="POST">
+        <input type="text" name="task" placeholder="What you have to do?" autofocus>
+        <input type="submit" value="Add Task">
+    </form>
+</div>
+<hr>
+{{#if todoList}}
+    <ol class="list">
+        {{#each todoList}}
+            {{#unless this.status}}
+                <li class="item" data-id="{{ this._id }}"><span>{{ this.task }}</span></li>
+            {{/unless}}
+        {{/each}}
+    </ol>
+    <ol class="list">
+        {{#each todoList}}
+            {{#if this.status}}
+                <li class="comp-item" data-id="{{ this._id }}"><span>{{ this.task }}</span></li>
+            {{/if}}
+        {{/each}}
+    </ol>
+{{else}}
+    <p>Hi, you don't have any shit to-do. Please get your shits together. Thanks.</p>
+{{/if}}
